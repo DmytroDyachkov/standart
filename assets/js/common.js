@@ -206,13 +206,13 @@ $(function(){
             nextEl: ".slick-m-next--services",
             prevEl: ".slick-m-prev--services",
         },
-        pagination: {
-          el: '.slick-dots--services',
-          type: 'bullets',
-        },
+        // pagination: {
+        //   el: '.slick-dots--services',
+        //   type: 'bullets',
+        // },
         breakpoints: {
             0: {
-                spaceBetween: 20,
+                spaceBetween: 10,
             },
             800: {
                 spaceBetween: 10,
@@ -316,18 +316,29 @@ $(function(){
         el.wrapInner('<div class="swiper-wrapper"></div>');
     }
 
+    if($(document).width() < 1140 ? true : false){
+        // Перемещаем элементы
+        $('.hero__item__right').appendTo( $('.hero'))
+        
+        $('.menu li.menu__item--back').each(function(){
+                $(this).find('a').first().addClass('parent__arrow');
+                $(this).find('a').first().removeAttr('href');
+        })
+        $('.menu__item').on('click','.parent', function(){
+            $(this).addClass('active__child');
+        })
+        $('.menu__item--back').click(function(){
+            $(this).parent('ul').parent('li').find('.parent').removeClass('active__child')
+        })
+    }
     if($(document).width() < 800 ? true : false){
         // перемещаем биг категории
         $('.cat-list__item--big').wrapAll('<div class="cat-list__item__group">');
         // Перемещаем фильтр
         $('.js-mob-cat-all__filter-item').appendTo( $('.cat-all__filter--mob'))
         // Перемещаем cart
-        $('.cart-mini').insertBefore( $('.js-mob-cart-mini'))
-        // Перемещаем элементы
-        $('.hero__item').each(function(){
-            $(this).find('.hero__item__right').appendTo( $(this).parent('.swiper-slide'))
+        // $('.cart-mini').insertBefore( $('.js-mob-cart-mini'))
     
-        })
         swiper_html($('.cat-list__items'),'cart_list')
         if ($('.carousel-init--cart_list').length > 0) {
             var sliderreviews = new Swiper('.carousel-init--cart_list', {
@@ -355,16 +366,6 @@ $(function(){
                 $(this).find('a').first().removeAttr('href');
                 // $(this).find('a').first().append('<div class="parent__arrow"></div>');
             }
-        })
-        $('.menu li.menu__item--back').each(function(){
-                $(this).find('a').first().addClass('parent__arrow');
-                $(this).find('a').first().removeAttr('href');
-        })
-        $('.parent').click(function(){
-            $(this).addClass('active__child');
-        })
-        $('.menu__item--back').click(function(){
-            $(this).parent('ul').parent('li').find('.parent').removeClass('active__child')
         })
     };
     if($(document).width() > 801 ? true : false){
@@ -466,16 +467,16 @@ $(function(){
         return false;
     });
 
-    $('input,textarea').on('input keyup', function () {
-        var Value = $(this).val();
-        if(Value == ''){
-            $(this).removeClass('true');
-            $(this).addClass('false'); 
-        }else{ 
-            $(this).removeClass('false'); 
-            $(this).addClass('true'); 
-        }
-    });
+    // $('input,textarea').on('input keyup', function () {
+    //     var Value = $(this).val();
+    //     if(Value == ''){
+    //         $(this).removeClass('true');
+    //         $(this).addClass('false'); 
+    //     }else{ 
+    //         $(this).removeClass('false'); 
+    //         $(this).addClass('true'); 
+    //     }
+    // });
 
     // Количество в корзине
     // Убавляем кол-во по клику
@@ -543,7 +544,7 @@ $(function(){
             class: 'new-select',
             text: _this.children('option:disabled').text()
         }).insertAfter(_this);
-        $(prevTextHtml).prependTo(_this.next());
+        // $(prevTextHtml).prependTo(_this.next());
 
 
         var selectHead = _this.next('.new-select');
@@ -606,6 +607,13 @@ $(function(){
             }
         });
     });
+	$(document).mouseup( function(e){ // событие клика по веб-документу
+		var div = $( ".select" );
+		if ( !div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+            $('.new-select').removeClass('on');
+		}
+	});
 
     $('.js-mapdata').click(function(){
         $('.js-mapdata').removeClass('active');
