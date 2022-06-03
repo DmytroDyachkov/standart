@@ -923,7 +923,7 @@ table tr:nth-child(even) {
 }
 
 .content_wp a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .content_wp .r_img img,
@@ -1482,7 +1482,7 @@ button .icon {
 .btn--href,
 .btn--remove {
   background: rgba(0, 0, 0, 0);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .js-open_modal {
@@ -1582,7 +1582,7 @@ button .icon {
 }
 
 .warning a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 [type='checkbox'],
@@ -2518,13 +2518,13 @@ a.active {
 }
 
 .href {
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 16px;
 }
 
 .href:hover {
   color: #2A2D32;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .block-header {
@@ -3229,7 +3229,7 @@ section.padding-top-100 {
 }
 
 .phone:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .work-time {
@@ -4057,7 +4057,7 @@ section.padding-top-100 {
 
 .footer__prev .footer__block .footer__items .footer__item .footer__item__menu ul li a:hover {
   color: #007BFB;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer__prev .footer__block .footer__items .footer__item .footer__item__menu + .footer__item__title {
@@ -4104,7 +4104,7 @@ section.padding-top-100 {
 }
 
 .footer__prev .footer__bottom a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .email {
@@ -4115,7 +4115,7 @@ section.padding-top-100 {
 }
 
 .email:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .adres {
@@ -4126,7 +4126,7 @@ section.padding-top-100 {
 }
 
 .adres:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .adres span {
@@ -4182,7 +4182,7 @@ section.padding-top-100 {
 
 .breadcrumbs-container a:hover {
   color: #007BFB;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .breadcrumbs-container span {
@@ -6514,7 +6514,7 @@ body *::-webkit-scrollbar-thumb:hover {
 }
 
 .maploc .maploc__email a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .maploc b {
@@ -6790,7 +6790,7 @@ body *::-webkit-scrollbar-thumb:hover {
 }
 
 .info-items a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .info-items.info-items--duo {
@@ -7317,7 +7317,7 @@ section.reviews-page {
 }
 
 .vacancy-page__items .vacancy-page__item .vacancy-page__item__desc a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .vacancy-page__items .vacancy-page__item .vacancy-page__item__btn {
