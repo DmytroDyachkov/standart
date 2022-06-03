@@ -6135,6 +6135,9 @@ body *::-webkit-scrollbar-thumb:hover {
   align-items: center;
   padding: 23px 20px;
   border: 1px solid #f2f2f200;
+  -webkit-transition: 0.3ss;
+  -o-transition: 0.3ss;
+  transition: 0.3ss;
 }
 
 .product-item:hover {
