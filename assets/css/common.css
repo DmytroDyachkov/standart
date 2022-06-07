@@ -3376,6 +3376,11 @@ section.padding-top-100 {
   transform: translateY(0px);
 }
 
+.cart-mini .cart-mini__items {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
 .cart-button {
   display: -webkit-box;
   display: -webkit-flex;
